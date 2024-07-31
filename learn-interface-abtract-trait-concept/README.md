@@ -14,33 +14,39 @@ This project demonstrates the use of traits, interfaces, and abstract classes in
 
 The project consists of a single PHP file containing the following components:
 
-- `Loggable` trait
-- `Printable` interface
-- `Shape` abstract class
-- `Circle` concrete class
+learn-interface-abtract-trait-concept/
+├── AbstractClasses
+│ └── Product.php
+├── Classes
+│ ├── ElectronicProduct.php
+│ └── Order.php
+├── Interfaces
+│ └── Discountable.php
+├── Traits
+│ └── Loggable.php
+├── index.php
+└── README.md
 
-## Code Example
 
-```php
-// Trait definition
-trait Loggable {
-    public function log($message) {
-        echo "Logging: $message\n";
-    }
-}
+## Concepts
 
-// Interface definition
-interface Printable {
-    public function print();
-}
+## Abstract Classes
 
-// Abstract class definition
-abstract class Shape {
-    // ... (abstract and concrete methods)
-}
+- **Product.php**: This file contains the abstract class `Product` which defines the blueprint for different types of products.
 
-// Concrete class implementation
-class Circle extends Shape implements Printable {
-    use Loggable;
-    // ... (constructor and method implementations)
-}
+## Classes
+
+- **ElectronicProduct.php**: This file contains the class `ElectronicProduct` which extends the `Product` abstract class.
+- **Order.php**: This file contains the class `Order` which manages product orders.
+
+## Interfaces
+
+- **Discountable.php**: This file contains the `Discountable` interface which defines the method for applying discounts.
+
+## Traits
+
+- **Loggable.php**: This file contains the `Loggable` trait which provides logging functionality to classes that use it.
+
+## Index
+
+- **index.php**: The entry point of the application demonstrating how to use the classes, interfaces, and traits.
